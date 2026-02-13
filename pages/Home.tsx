@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -84,13 +83,15 @@ const Home: React.FC = () => {
            <svg className="w-40 h-40" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12h3v8h14v-8h3L12 2zm0 15c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
         </div>
         <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
-          <div className="space-y-2">
-            <h3 className="text-sm font-bold uppercase tracking-widest opacity-80">অ্যাপটির রূপকার</h3>
-            <h2 className="text-4xl font-black">মোফাজ্জল হোসেন</h2>
-            <p className="text-xl font-bold opacity-90">৪র্থ বর্ষের শিক্ষার্থী</p>
-            <div className="pt-2">
-               <p className="font-medium opacity-80">ভেটেরিনারি মেডিসিন ও এনিমেল সায়েন্স অনুষদ</p>
-               <p className="font-medium opacity-80">গাজীপুর কৃষি বিশ্ববিদ্যালয়</p>
+          <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="space-y-1 text-center md:text-left">
+              <h3 className="text-sm font-bold uppercase tracking-widest opacity-80">অ্যাপটির রূপকার</h3>
+              <h2 className="text-4xl font-black">মোফাজ্জল হোসেন</h2>
+              <p className="text-xl font-bold opacity-90">৪র্থ বর্ষের শিক্ষার্থী</p>
+              <div className="pt-2">
+                 <p className="font-medium opacity-80">ভেটেরিনারি মেডিসিন ও এনিমেল সায়েন্স অনুষদ</p>
+                 <p className="font-medium opacity-80">গাজীপুর কৃষি বিশ্ববিদ্যালয়</p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end space-y-4">
