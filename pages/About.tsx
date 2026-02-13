@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const About: React.FC = () => {
@@ -22,10 +21,45 @@ const About: React.FC = () => {
         
         <div className="p-8 space-y-8">
           <section>
-            <h3 className="text-xl font-bold text-gray-800 border-b-2 border-green-100 pb-2 mb-4">উদ্দেশ্য (Mission)</h3>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              বাংলাদেশের গ্রামীণ খামারি ও প্রাণিসম্পদ শিক্ষার্থীদের গবাদি পশু ও হাঁস-মুরগির সাধারণ রোগগুলো দ্রুত এবং সহজেই শনাক্ত করতে সাহায্য করার জন্য এই "অফলাইন" উপযোগী অ্যাপ্লিকেশনটি তৈরি করা হয়েছে। আমাদের লক্ষ্য প্রান্তিক খামারিদের কাছে আধুনিক চিকিৎসা তথ্য পৌঁছে দেওয়া।
+            <h3 className="text-xl font-bold text-gray-800 border-b-2 border-green-100 pb-2 mb-4">আমাদের লক্ষ্য (Our Mission)</h3>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              ShanimalDT হলো বাংলাদেশের গবাদি পশু ও হাঁস-মুরগির স্বাস্থ্য সুরক্ষায় নিবেদিত একটি ডিজিটাল প্ল্যাটফর্ম। আমাদের মূল লক্ষ্য হলো আধুনিক প্রযুক্তির মাধ্যমে প্রাণিসম্পদ খাতের সঠিক তথ্য এবং রোগ নির্ণয়ের সেবা প্রান্তিক খামারিদের হাতের নাগালে পৌঁছে দেওয়া।
             </p>
+
+            <h4 className="text-xl font-bold text-[#2E7D32] mb-4">কেন ShanimalDT ব্যবহার করবেন?</h4>
+            <p className="text-gray-600 mb-4 font-medium">
+              বাংলাদেশে পোল্ট্রি এবং লাইভস্টক সেক্টরে সঠিক সময়ে রোগ শনাক্ত করতে না পারার কারণে খামারিরা প্রায়ই বড় ধরণের ক্ষতির সম্মুখীন হন। এই অ্যাপটি এমনভাবে তৈরি করা হয়েছে যেন:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-[#2E7D32]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-gray-700"><strong>সহজ রোগ নির্ণয়:</strong> পশুর শরীরের অস্বাভাবিক লক্ষণগুলো সিলেক্ট করেই আপনি সম্ভাব্য রোগ সম্পর্কে জানতে পারবেন।</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-[#2E7D32]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-gray-700"><strong>সহজ ভাষা:</strong> কঠিন মেডিকেল টার্মের পরিবর্তে সাধারণ খামারিদের উপযোগী সহজ বাংলা ভাষা ব্যবহার করা হয়েছে।</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-green-100 rounded-full p-1 mr-3 mt-1">
+                  <svg className="w-4 h-4 text-[#2E7D32]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <span className="text-gray-700"><strong>সঠিক নির্দেশনা:</strong> প্রতিটি রোগের জন্য কার্যকর প্রতিরোধ ব্যবস্থা, নিয়ন্ত্রণ এবং প্রাথমিক চিকিৎসার পরামর্শ দেওয়া হয়েছে।</span>
+              </li>
+            </ul>
+
+            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 shadow-sm">
+              <h4 className="text-amber-800 font-bold mb-2 flex items-center">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
+                সতর্কবার্তা
+              </h4>
+              <p className="text-amber-900 text-sm leading-relaxed">
+                ShanimalDT মূলত সচেতনতা বৃদ্ধি এবং প্রাথমিক সহায়তার জন্য তৈরি। পশুর অবস্থা গুরুতর হলে বা জটিল কোনো রোগের ক্ষেত্রে সর্বদা আপনার নিকটস্থ রেজিস্টার্ড ভেটেরিনারি সার্জন বা উপজেলা প্রাণিসম্পদ কর্মকর্তার পরামর্শ গ্রহণ করুন।
+              </p>
+            </div>
           </section>
 
           <section className="bg-gradient-to-br from-gray-50 to-green-50 p-6 rounded-3xl border border-green-100 shadow-inner text-center">
