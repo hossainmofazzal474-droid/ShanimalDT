@@ -13,7 +13,29 @@ const Home: React.FC = () => {
         </p>
       </div>
 
-      <div className="text-center">
+      {/* Steps Section - Moved Up */}
+      <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+        <h3 className="font-bold text-[#2E7D32] mb-5 flex items-center text-xl">
+          <svg className="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
+          সহজ ৩টি ধাপ:
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
+            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">১</div>
+            <p className="font-semibold text-gray-700">প্রাণীর বিভাগ নির্বাচন করুন</p>
+          </div>
+          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
+            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">২</div>
+            <p className="font-semibold text-gray-700">লক্ষণগুলো টিক দিন</p>
+          </div>
+          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
+            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">৩</div>
+            <p className="font-semibold text-gray-700">ফলাফল ও প্রতিকার দেখুন</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center pt-4">
         <h3 className="text-3xl md:text-4xl font-bold text-gray-800 border-b-4 border-green-500 inline-block pb-2 px-4 rounded-lg">
           যেকোনো একটি অপশন নির্বাচন করুন!
         </h3>
@@ -53,28 +75,6 @@ const Home: React.FC = () => {
             রোগ নির্ণয় শুরু করুন
           </div>
         </button>
-      </div>
-
-      {/* Steps Section */}
-      <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm mt-8">
-        <h3 className="font-bold text-[#2E7D32] mb-5 flex items-center text-xl">
-          <svg className="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
-          সহজ ৩টি ধাপ:
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
-            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">১</div>
-            <p className="font-semibold text-gray-700">প্রাণীর বিভাগ নির্বাচন করুন</p>
-          </div>
-          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
-            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">২</div>
-            <p className="font-semibold text-gray-700">লক্ষণগুলো টিক দিন</p>
-          </div>
-          <div className="flex items-center space-x-4 p-4 rounded-2xl bg-green-50/50 border border-green-100">
-            <div className="bg-[#2E7D32] text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-sm">৩</div>
-            <p className="font-semibold text-gray-700">ফলাফল ও প্রতিকার দেখুন</p>
-          </div>
-        </div>
       </div>
 
       {/* Developer Section */}
