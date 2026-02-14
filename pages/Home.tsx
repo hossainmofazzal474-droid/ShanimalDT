@@ -45,7 +45,7 @@ const Home: React.FC = () => {
         {/* Poultry Option */}
         <button
           onClick={() => navigate('/diagnosis/Poultry')}
-          className="group relative bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-2 border-transparent hover:border-[#2E7D32] overflow-hidden"
+          className="group relative bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-2 border-[#2E7D32] overflow-hidden"
         >
           <span className="text-3xl font-bold text-gray-800">হাঁস-মুরগি (Poultry)</span>
           <div className="mt-4 flex flex-wrap justify-center gap-2">
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             <span className="bg-green-100 text-[#2E7D32] px-4 py-1.5 rounded-full text-sm font-bold">কোয়েল</span>
             <span className="bg-green-100 text-[#2E7D32] px-4 py-1.5 rounded-full text-sm font-bold">কবুতর</span>
           </div>
-          <div className="mt-8 bg-[#2E7D32] text-white text-base font-bold px-10 py-3 rounded-full transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all shadow-lg">
+          <div className="mt-8 bg-[#2E7D32] text-white text-base font-bold px-10 py-3 rounded-full transition-all shadow-lg group-hover:scale-105 active:scale-95">
             রোগ নির্ণয় শুরু করুন
           </div>
         </button>
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
         {/* Livestock Option */}
         <button
           onClick={() => navigate('/diagnosis/Livestock')}
-          className="group relative bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-2 border-transparent hover:border-[#8D6E63] overflow-hidden"
+          className="group relative bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-2 border-[#8D6E63] overflow-hidden"
         >
           <span className="text-3xl font-bold text-gray-800">গবাদি পশু (Livestock)</span>
           <div className="mt-4 flex flex-wrap justify-center gap-2">
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
             <span className="bg-amber-100 text-[#8D6E63] px-4 py-1.5 rounded-full text-sm font-bold">মহিষ</span>
             <span className="bg-amber-100 text-[#8D6E63] px-4 py-1.5 rounded-full text-sm font-bold">ভেড়া</span>
           </div>
-          <div className="mt-8 bg-[#8D6E63] text-white text-base font-bold px-10 py-3 rounded-full transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all shadow-lg">
+          <div className="mt-8 bg-[#8D6E63] text-white text-base font-bold px-10 py-3 rounded-full transition-all shadow-lg group-hover:scale-105 active:scale-95">
             রোগ নির্ণয় শুরু করুন
           </div>
         </button>
