@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { MatchResult } from '../types';
@@ -9,7 +8,6 @@ const Result: React.FC = () => {
   const results = location.state?.results as MatchResult[] || [];
   const selectedCount = location.state?.selectedCount || 0;
 
-  // Helper function to convert English numerals to Bengali
   const toBengaliNumber = (num: number | string) => {
     const bengaliDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
     return num.toString().replace(/\d/g, d => bengaliDigits[parseInt(d)]);
@@ -17,7 +15,7 @@ const Result: React.FC = () => {
 
   if (results.length === 0) {
     return (
-      <div className="text-center py-20 space-y-6">
+      <div className="py-20 text-center space-y-6">
         <div className="text-6xl animate-bounce">😕</div>
         <h2 className="text-2xl font-bold text-gray-800">কোনো রোগ খুঁজে পাওয়া যায়নি</h2>
         <p className="text-gray-500">আপনার নির্বাচিত লক্ষণের সাথে কোনো রোগের মিল পাওয়া যায়নি। পুনরায় চেষ্টা করুন।</p>
@@ -68,7 +66,6 @@ const Result: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-6">
-                  {/* Prevention */}
                   <div>
                     <h4 className="flex items-center text-[#2E7D32] font-bold mb-2 text-lg">
                       <div className="bg-green-100 p-1 rounded-md mr-2">
@@ -79,7 +76,6 @@ const Result: React.FC = () => {
                     <p className="text-gray-700 leading-relaxed text-base">{res.disease.prevention_bn}</p>
                   </div>
 
-                  {/* Control */}
                   <div>
                     <h4 className="flex items-center text-[#8D6E63] font-bold mb-2 text-lg">
                       <div className="bg-amber-100 p-1 rounded-md mr-2">
@@ -91,7 +87,6 @@ const Result: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Treatment */}
                 <div className="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200 shadow-inner">
                   <h4 className="flex items-center text-amber-900 font-bold mb-3 text-lg">
                     <div className="bg-amber-200 p-1.5 rounded-lg mr-2">
@@ -100,24 +95,11 @@ const Result: React.FC = () => {
                     চিকিৎসা (Treatment):
                   </h4>
                   <p className="text-gray-900 font-semibold leading-relaxed text-base">{res.disease.treatment_bn}</p>
-                  <div className="mt-4 pt-4 border-t border-amber-200 flex items-start space-x-2">
-                    <svg className="w-4 h-4 text-red-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
-                    <p className="text-xs text-red-800 font-black uppercase tracking-wider leading-tight">অবশ্যই রেজিস্টার্ড ভেটেরিনারি চিকিৎসকের পরামর্শ নিন।</p>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-      
-      <div className="p-5 bg-blue-50 rounded-2xl border-2 border-blue-100 text-sm text-blue-900 shadow-sm flex items-start space-x-4">
-        <div className="bg-blue-500 p-1 rounded-full text-white mt-1">
-          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" /></svg>
-        </div>
-        <p className="leading-relaxed">
-          <strong>সতর্কবার্তা:</strong> এই অ্যাপটি একটি সহায়ক ডিজিটাল টুল মাত্র। আপনার পশুপাখির চূড়ান্ত চিকিৎসা বা উন্নত ব্যবস্থাপনার জন্য সর্বদা নিকটস্থ উপজেলা প্রাণিসম্পদ কর্মকর্তার কার্যালয় বা রেজিস্টার্ড ভেটেরিনারি চিকিৎসকের সাথে সরাসরি যোগাযোগ করুন।
-        </p>
       </div>
     </div>
   );

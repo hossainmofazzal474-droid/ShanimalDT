@@ -1,22 +1,30 @@
 import React from 'react';
 
 const About: React.FC = () => {
+  const logoUrl = "https://i.postimg.cc/59BKjd9H/IMG-20260215-195818-713.jpg";
+  const creatorImageUrl = "https://i.postimg.cc/SQgQB50X/IMG-20260215-195822-483.jpg";
+  const headerImageUrl = "https://i.postimg.cc/FKZrZnNk/IMG-1408.jpg";
+
   return (
-    <div className="animate-fadeIn max-w-2xl mx-auto py-4 md:py-8">
-      <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-        <div className="bg-[#2E7D32] p-10 text-center text-white relative">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-               <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-             </svg>
-          </div>
-          <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full mx-auto mb-4 flex items-center justify-center border-4 border-white/30 relative z-10">
-             <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-             </svg>
-          </div>
-          <h2 className="text-3xl font-black mb-1 relative z-10">ShanimalDT</h2>
-          <p className="opacity-90 font-medium tracking-wide relative z-10 italic">Service, Animal, Diagnosis, Treatment</p>
+    <div className="animate-fadeIn py-4 md:py-8">
+      <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+        {/* New 16:9 Header Image Section */}
+        <div className="w-full aspect-video relative overflow-hidden bg-gray-100">
+          <img 
+            src={headerImageUrl} 
+            alt="ShanimalDT Header" 
+            className="w-full h-full object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.parentElement!.innerHTML = `
+                <div class="w-full h-full bg-[#2E7D32] flex flex-col items-center justify-center text-white p-6">
+                  <h2 class="text-3xl font-black">ShanimalDT</h2>
+                  <p class="italic opacity-90">Service, Animal, Diagnosis, Treatment</p>
+                </div>
+              `;
+            }}
+          />
         </div>
         
         <div className="p-8 space-y-8">
@@ -51,7 +59,7 @@ const About: React.FC = () => {
               </li>
             </ul>
 
-            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 shadow-sm">
+            <div className="bg-amber-50 rounded-2xl p-6 border border-amber-100 shadow-sm mb-8">
               <h4 className="text-amber-800 font-bold mb-2 flex items-center">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                 সতর্কবার্তা
@@ -63,11 +71,25 @@ const About: React.FC = () => {
           </section>
 
           <section className="bg-gradient-to-br from-gray-50 to-green-50 p-6 rounded-3xl border border-green-100 shadow-inner text-center">
-            <h3 className="text-lg font-bold text-[#2E7D32] mb-4 uppercase tracking-widest text-xs">ডেভেলপার ক্রেডিট</h3>
-            <div className="flex flex-col items-center space-y-2">
+            <h3 className="text-lg font-bold text-[#2E7D32] mb-6 uppercase tracking-widest text-xs">ডেভেলপার ক্রেডিট</h3>
+            <div className="flex flex-col items-center space-y-3">
+              {/* Creator Profile Picture */}
+              <div className="w-24 h-24 rounded-full border-4 border-[#2E7D32]/20 shadow-xl overflow-hidden mb-2">
+                <img 
+                  src={creatorImageUrl} 
+                  alt="মোফাজ্জল হোসেন" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = `<div class="w-full h-full bg-green-100 flex items-center justify-center text-3xl">👨‍⚕️</div>`;
+                  }}
+                />
+              </div>
+              
               <p className="text-2xl font-black text-gray-900 leading-tight">মোফাজ্জল হোসেন</p>
               <p className="text-[#2E7D32] font-bold text-base">৪র্থ বর্ষের শিক্ষার্থী</p>
-              <p className="text-sm text-gray-700 font-semibold">ভেটেরিনারি মেডিসিন ও এনিমেল সায়েন্স অনুষদ</p>
+              <p className="text-sm text-gray-700 font-semibold">ভেটেরিনারি মেডিসিন এন্ড এনিমেল সায়েন্স অনুষদ</p>
               <p className="text-sm text-gray-600 font-medium">গাজীপুর কৃষি বিশ্ববিদ্যালয়</p>
               
               <div className="mt-4 flex justify-center space-x-3">
@@ -75,11 +97,8 @@ const About: React.FC = () => {
                 <span className="bg-white px-3 py-1 rounded-full text-[10px] font-bold text-green-700 border border-green-200 shadow-sm">DEVELOPER</span>
               </div>
             </div>
-          </section>
-
-          <section className="text-center pt-4">
-            <h3 className="text-sm font-bold text-gray-400 mb-4 uppercase tracking-tighter">আমাদের সাথে যুক্ত হোন</h3>
-            <div className="flex justify-center">
+            
+            <div className="mt-6 flex justify-center">
               <a 
                 href="https://www.facebook.com/MofazzalHSN" 
                 target="_blank" 
