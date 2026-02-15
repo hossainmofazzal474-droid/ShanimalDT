@@ -1,13 +1,16 @@
+
 import React from 'react';
 import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Diagnosis from './pages/Diagnosis';
 import Result from './pages/Result';
 import About from './pages/About';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <HashRouter>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col text-gray-800">
         {/* Navigation Bar */}
         <header className="bg-[#2E7D32]/95 backdrop-blur-md text-white shadow-lg sticky top-0 z-50">
