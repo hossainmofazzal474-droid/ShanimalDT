@@ -5,6 +5,7 @@ import Diagnosis from './pages/Diagnosis';
 import Result from './pages/Result';
 import About from './pages/About';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const App: React.FC = () => {
   const logoUrl = "https://i.postimg.cc/59BKjd9H/IMG-20260215-195818-713.jpg";
@@ -66,6 +67,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </footer>
+
+        {/* Floating Scroll To Top Button */}
+        <ScrollToTopButton />
       </div>
     </HashRouter>
   );
