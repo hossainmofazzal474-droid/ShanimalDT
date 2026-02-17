@@ -14,23 +14,23 @@ const Home: React.FC = () => {
         <div className="flex flex-col items-center justify-center space-y-4 mb-2">
           <img 
             src={logoUrl} 
-            className="w-24 h-24 md:w-36 md:h-36 rounded-full shadow-2xl border-4 border-white object-cover transform transition-transform hover:scale-105" 
+            className="w-24 h-24 md:w-36 md:h-36 rounded-full shadow-2xl border-4 border-white dark:border-slate-700 object-cover transform transition-transform hover:scale-105" 
             alt="Logo" 
           />
-          <h2 className="text-5xl md:text-6xl font-black text-[#2E7D32] tracking-tight">ShanimalDT</h2>
+          <h2 className="text-5xl md:text-6xl font-black text-[#2E7D32] dark:text-green-400 tracking-tight">ShanimalDT</h2>
         </div>
-        <p className="text-gray-600 max-w-lg mx-auto font-medium text-lg">
+        <p className="text-gray-600 dark:text-gray-300 max-w-lg mx-auto font-medium text-lg">
           আপনার পশুপাখির সুস্থতা নিশ্চিত করতে সঠিক লক্ষণ নির্বাচন করুন এবং রোগের সম্ভাব্য কারণ ও প্রতিকার জানুন।
         </p>
       </div>
 
       {/* Steps Section with 100% Opacity Background Image */}
       <div 
-        className="relative p-8 rounded-[2.5rem] border-4 border-green-600 shadow-2xl overflow-hidden bg-cover bg-center"
+        className="relative p-8 rounded-[2.5rem] border-4 border-green-600 dark:border-green-500 shadow-2xl overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url('${stepsBgUrl}')` }}
       >
         {/* Subtle overlay to ensure text readability without dimming the image significantly */}
-        <div className="absolute inset-0 bg-black/20 z-0"></div>
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
         
         <div className="relative z-10">
           <h3 className="font-black text-white mb-6 flex items-center text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="text-center pt-4">
-        <h3 className="text-3xl md:text-4xl font-bold text-gray-800 border-b-4 border-green-500 inline-block pb-2 px-4 rounded-lg">
+        <h3 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-100 border-b-4 border-green-500 inline-block pb-2 px-4 rounded-lg">
           যেকোনো একটি অপশন নির্বাচন করুন!
         </h3>
       </div>
@@ -66,7 +66,7 @@ const Home: React.FC = () => {
         {/* Poultry Option with 100% Opacity Image Background */}
         <button
           onClick={() => navigate('/diagnosis/Poultry')}
-          className="group relative rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-4 border-green-600 overflow-hidden bg-cover bg-center min-h-[220px]"
+          className="group relative rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-4 border-green-600 dark:border-green-500 overflow-hidden bg-cover bg-center min-h-[220px]"
           style={{ backgroundImage: `url('${poultryBgUrl}')` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40 z-0"></div>
@@ -87,7 +87,7 @@ const Home: React.FC = () => {
         {/* Livestock Option with 100% Opacity Image Background */}
         <button
           onClick={() => navigate('/diagnosis/Livestock')}
-          className="group relative rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-4 border-green-600 overflow-hidden bg-cover bg-center min-h-[220px]"
+          className="group relative rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 p-10 flex flex-col items-center border-4 border-green-600 dark:border-green-500 overflow-hidden bg-cover bg-center min-h-[220px]"
           style={{ backgroundImage: `url('${livestockBgUrl}')` }}
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40 z-0"></div>
@@ -107,13 +107,13 @@ const Home: React.FC = () => {
       </div>
 
       {/* Creator Information Section - Text Only with Social Link */}
-      <div className="mt-16 pt-10 border-t border-green-200 text-center animate-fadeIn">
-        <div className="bg-white/60 backdrop-blur-sm p-8 rounded-[2rem] border border-green-100 shadow-sm max-w-2xl mx-auto">
-          <h3 className="text-2xl font-black text-[#2E7D32] mb-3">উদ্ভাবক ও নির্মাতার তথ্য</h3>
+      <div className="mt-16 pt-10 border-t border-green-200 dark:border-slate-800 text-center animate-fadeIn">
+        <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm p-8 rounded-[2rem] border border-green-100 dark:border-slate-700 shadow-sm max-w-2xl mx-auto">
+          <h3 className="text-2xl font-black text-[#2E7D32] dark:text-green-400 mb-3">উদ্ভাবক ও নির্মাতার তথ্য</h3>
           <div className="space-y-2">
-            <p className="text-xl font-bold text-gray-800">মোফাজ্জল হোসেন</p>
-            <p className="text-gray-600 font-semibold">৪র্থ বর্ষের শিক্ষার্থী, ভেটেরিনারি মেডিসিন এন্ড এনিমেল সায়েন্স অনুষদ</p>
-            <p className="text-gray-500">গাজীপুর কৃষি বিশ্ববিদ্যালয়</p>
+            <p className="text-xl font-bold text-gray-800 dark:text-gray-100">মোফাজ্জল হোসেন</p>
+            <p className="text-gray-600 dark:text-gray-300 font-semibold">৪র্থ বর্ষের শিক্ষার্থী, ভেটেরিনারি মেডিসিন এন্ড এনিমেল সায়েন্স অনুষদ</p>
+            <p className="text-gray-500 dark:text-gray-400">গাজীপুর কৃষি বিশ্ববিদ্যালয়</p>
           </div>
           
           <div className="mt-6 flex flex-col items-center space-y-4">
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
             
             <button 
               onClick={() => navigate('/about')}
-              className="text-[#2E7D32] font-bold hover:underline flex items-center space-x-1"
+              className="text-[#2E7D32] dark:text-green-400 font-bold hover:underline flex items-center space-x-1"
             >
               <span>বিস্তারিত জানুন</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>

@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShanimalDT - প্রাণিসম্পদ রোগ নির্ণয়</title>
+    <title>ShanimalDT</title>
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ShanimalDT">
+    <meta property="og:description" content="পশুপাখির রোগ নির্ণয় ও প্রতিকার ডিজিটাল প্ল্যাটফর্ম। আপনার পশুপাখির সুস্থতা নিশ্চিত করুন।">
+    <meta property="og:image" content="https://i.postimg.cc/59BKjd9H/IMG-20260215-195818-713.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ShanimalDT">
+    <meta name="twitter:description" content="পশুপাখির রোগ নির্ণয় ও প্রতিকার ডিজিটাল প্ল্যাটফর্ম।">
+    <meta name="twitter:image" content="https://i.postimg.cc/59BKjd9H/IMG-20260215-195818-713.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2E7D32',
+              darkBg: '#0f172a',
+              darkCard: '#1e293b',
+            }
+          }
+        }
+      }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,10 +39,14 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            /* Nature-inspired background: Soft green to sky blue gradient */
+            transition: background-color 0.3s ease, color 0.3s ease;
             background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
             background-attachment: fixed;
             position: relative;
+        }
+
+        html.dark body {
+            background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
         }
 
         /* Subtle organic pattern overlay */
@@ -32,6 +63,11 @@
             z-index: -1;
         }
 
+        html.dark body::before {
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234ade80' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
         /* Themed decorative blobs */
         .bg-blob {
             position: fixed;
@@ -42,9 +78,13 @@
             opacity: 0.4;
             z-index: -1;
             pointer-events: none;
+            transition: opacity 0.3s ease;
         }
         .blob-1 { top: -100px; left: -100px; background: #dcfce7; }
         .blob-2 { bottom: -100px; right: -100px; background: #fef3c7; }
+
+        html.dark .blob-1 { background: #064e3b; opacity: 0.2; }
+        html.dark .blob-2 { background: #1e3a8a; opacity: 0.2; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -66,7 +106,7 @@
 </script>
 <script type="module" src="index.tsx"></script>
 </head>
-<body>
+<body class="dark:text-gray-100">
     <div class="bg-blob blob-1"></div>
     <div class="bg-blob blob-2"></div>
     <div id="root"></div>

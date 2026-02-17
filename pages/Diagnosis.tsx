@@ -51,29 +51,29 @@ const Diagnosis: React.FC = () => {
   return (
     <div className="animate-fadeIn pb-24">
       <div className="mb-6">
-        <button onClick={() => navigate('/')} className="text-[#2E7D32] flex items-center text-sm font-medium hover:underline transition-all">
+        <button onClick={() => navigate('/')} className="text-[#2E7D32] dark:text-green-400 flex items-center text-sm font-medium hover:underline transition-all">
           <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
           পেছনে যান
         </button>
-        <h2 className="text-2xl font-bold mt-2 text-gray-800">
+        <h2 className="text-2xl font-bold mt-2 text-gray-800 dark:text-gray-100">
           {category === 'Poultry' ? 'হাঁস-মুরগির লক্ষণসমূহ' : 'গবাদি পশুর লক্ষণসমূহ'}
         </h2>
-        <p className="text-gray-600 text-lg mt-2 leading-relaxed">
-          তালিকা থেকে লক্ষ্মণগুলো নির্বাচন করুন এবং নিচের <span className="bg-green-100 text-[#2E7D32] px-2 py-0.5 rounded-lg font-bold border border-green-200">'রোগ নির্ণয় করুন'</span> বাটনে ক্লিক করুন
+        <p className="text-gray-600 dark:text-gray-300 text-lg mt-2 leading-relaxed">
+          তালিকা থেকে লক্ষ্মণগুলো নির্বাচন করুন এবং নিচের <span className="bg-green-100 dark:bg-green-900/40 text-[#2E7D32] dark:text-green-300 px-2 py-0.5 rounded-lg font-bold border border-green-200 dark:border-green-800">'রোগ নির্ণয় করুন'</span> বাটনে ক্লিক করুন
         </p>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-10">
-        <div className="divide-y divide-gray-100">
+      <div className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden mb-10 transition-colors">
+        <div className="divide-y divide-gray-100 dark:divide-slate-700">
           {availableSymptoms.map((symptom, idx) => (
-            <label key={idx} className="flex items-center p-4 hover:bg-gray-50 cursor-pointer transition-colors group">
+            <label key={idx} className="flex items-center p-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 cursor-pointer transition-colors group">
               <input
                 type="checkbox"
-                className="w-6 h-6 text-[#2E7D32] rounded border-gray-300 focus:ring-[#2E7D32] transition-all cursor-pointer"
+                className="w-6 h-6 text-[#2E7D32] dark:text-green-500 rounded border-gray-300 dark:border-slate-600 focus:ring-[#2E7D32] transition-all cursor-pointer"
                 checked={selectedSymptoms.includes(symptom)}
                 onChange={() => toggleSymptom(symptom)}
               />
-              <span className={`ml-4 text-lg transition-colors ${selectedSymptoms.includes(symptom) ? 'text-[#2E7D32] font-bold' : 'text-gray-700'}`}>
+              <span className={`ml-4 text-lg transition-colors ${selectedSymptoms.includes(symptom) ? 'text-[#2E7D32] dark:text-green-400 font-bold' : 'text-gray-700 dark:text-gray-300'}`}>
                 {symptom}
               </span>
             </label>
@@ -82,11 +82,11 @@ const Diagnosis: React.FC = () => {
       </div>
 
       {/* Sticky Diagnose Button */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-md border-t shadow-lg flex justify-center z-40">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t dark:border-slate-800 shadow-lg flex justify-center z-40 transition-colors">
         <div className="max-w-4xl w-full flex justify-center">
           <button
             onClick={handleDiagnose}
-            className="bg-[#2E7D32] hover:bg-[#256628] text-white font-bold py-4 px-16 rounded-full shadow-lg transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-xl"
+            className="bg-[#2E7D32] dark:bg-green-600 hover:bg-[#256628] dark:hover:bg-green-500 text-white font-bold py-4 px-10 md:px-16 rounded-full shadow-lg transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed text-lg md:text-xl"
             disabled={selectedSymptoms.length === 0}
           >
             রোগ নির্ণয় করুন ({selectedSymptoms.length})
